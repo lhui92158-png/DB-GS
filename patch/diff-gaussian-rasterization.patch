@@ -1,0 +1,17 @@
+﻿diff --git a/setup.py b/setup.py
+index bb7220d..1e12a3c 100644
+--- a/setup.py
++++ b/setup.py
+@@ -26,7 +26,11 @@ setup(
+             "cuda_rasterizer/backward.cu",
+             "rasterize_points.cu",
+             "ext.cpp"],
+-            extra_compile_args={"nvcc": ["-I" + os.path.join(os.path.dirname(os.path.abspath(__file__)), "third_party/glm/")]})
++            extra_compile_args={"nvcc": ["-I" + os.path.join(os.path.dirname(os.path.abspath(__file__)), "third_party/glm/"),
++                                         "-ID:/DSH_Project/AI_Projects/cccl_headers/cub",
++                                         "-ID:/DSH_Project/AI_Projects/cccl_headers/thrust",
++                                         "-allow-unsupported-compiler",
++                                         "-D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH"]})
+         ],
+     cmdclass={
+         'build_ext': BuildExtension

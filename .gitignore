@@ -1,0 +1,33 @@
+# Data / checkpoints (large)
+data/
+output/
+checkpoints/
+*.ply
+*.pth
+*.ckpt
+*.onnx
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+*.so
+*.pyd
+.venv/
+venv*/
+pip-wheel-metadata/
+
+# Logs / temp
+*.log
+tau_*_log.txt
+temp/
+tmp/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

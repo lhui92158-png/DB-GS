@@ -1,0 +1,15 @@
+﻿diff --git a/setup.py b/setup.py
+index fcffbbe..1bd4151 100644
+--- a/setup.py
++++ b/setup.py
+@@ -9,7 +9,9 @@ setup(
+             name="fused_ssim_cuda",
+             sources=[
+             "ssim.cu",
+-            "ext.cpp"])
++            "ext.cpp"],
++            extra_compile_args={"nvcc": ["-allow-unsupported-compiler",
++                                         "-D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH"]})
+         ],
+     cmdclass={
+         'build_ext': BuildExtension
